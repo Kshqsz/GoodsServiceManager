@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-3">
+    <h2 class="text-center">商品管理用户登录界面</h2>
+</div>
+<div id="app" class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <form @submit.prevent="login">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" v-model="loginForm.username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" v-model="loginForm.password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../Vue/vue.js"></script>
+<script src="../axios/axios.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            loginForm: {
+                username: '',
+                password: ''
+            }
+        },
+        methods: {
+            login() {
+                axios.post("http://localhost:8080/login", this.loginForm)
+                    .then(res => {
+                        if (res.data.success) {
+                            window.location.href = '/index.html';
+                        } else {
+                            this.$message.error("账号或密码错误")
+                        }
+                    })
+            }
+        }
+    })
+</script>
+</body>
+</html>

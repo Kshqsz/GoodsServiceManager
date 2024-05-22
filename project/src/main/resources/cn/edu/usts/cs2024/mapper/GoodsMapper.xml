@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.usts.cs2024.mapper.GoodsMapper">
+
+    <select id="getGoodsByCriteria" resultType="cn.edu.usts.cs2024.pojo.Goods">
+        select * from javaee.goods
+        <where>
+            <if test="searchName != null and searchName != ''"> and name like concat('%', #{searchName}, '%') </if>
+            <if test="searchCategory != null and searchCategory != ''"> and category = #{searchCategory}</if>
+        </where>
+    </select>
+    <insert id="add">
+        insert into goods(name, category, origin, price, production_date, manufacturer)
+        values(#{name}, #{category}, #{origin}, #{price}, #{productionDate}, #{manufacturer})
+    </insert>
+    <update id="update">
+        update goods
+        <set>
+            <if test="name != null"> name = #{name},</if>
+            <if test="category != null"> category = #{category},</if>
+            <if test="origin != null"> origin = #{origin},</if>
+            <if test="price != null"> price = #{price},</if>
+            <if test="productionDate != null"> production_date = #{productionDate},</if>
+            <if test="manufacturer != null"> manufacturer = #{manufacturer},</if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <select id="pageQuery" resultType="cn.edu.usts.cs2024.pojo.Goods">
+        select * from javaee.goods
+        <where>
+            <if test="searchName != null and searchName != ''"> and name like concat('%', #{searchName}, '%') </if>
+            <if test="searchCategory != null and searchCategory != ''"> and category = #{searchCategory}</if>
+        </where>
+        limit #{start}, #{size}
+    </select>
+</mapper>

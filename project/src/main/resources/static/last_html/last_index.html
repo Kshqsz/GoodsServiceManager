@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品信息管理系统</title>
+    <!-- 引入Bootstrap CSS文件 -->
+    <link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</head>
+<body>
+<div id="app" class="container mt-3">
+    <h1 class="float-start">商品信息管理系统</h1>
+    <!-- 导出按钮 -->
+    <div class="float-end">
+        <button class="btn btn-success" @click="exportToExcel">导出 Excel</button>
+    </div>
+    <div class="clearfix"></div>
+    <!-- 查询条件输入框 -->
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <input type="text" class="form-control" v-model="searchName" placeholder="商品名称">
+        </div>
+        <div class="col-md-2">
+            <input type="text" class="form-control" v-model="searchCategory" placeholder="类别">
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" @click="searchGoods">查询</button>
+        </div>
+    </div>
+    <!-- 商品信息表格 -->
+    <table id="goodsTable" class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>商品名称</th>
+            <th>类别</th>
+            <th>产地</th>
+            <th>价格</th>
+            <th>生产日期</th>
+            <th>生产商</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="goods in goodsList" :key="goods.id">
+            <td>{{ goods.id }}</td>
+            <td>{{ goods.name }}</td>
+            <td>{{ goods.category }}</td>
+            <td>{{ goods.origin }}</td>
+            <td>{{ goods.price }}</td>
+            <td>{{ goods.productionDate }}</td>
+            <td>{{ goods.manufacturer }}</td>
+            <td>
+                <!-- 编辑按钮 -->
+                <a :href="'update.html?id=' + goods.id" class="btn btn-sm btn-primary">编辑</a>
+                <!-- 删除按钮 -->
+                <a :href="'deleteConfirm.html?id=' + goods.id" class="btn btn-sm btn-danger">删除</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- 新增按钮 -->
+    <div class="row mb-3">
+        <div class="col-md-2">
+            <a href="add.html" class="btn btn-success">新增商品</a>
+        </div>
+    </div>
+</div>
+
+<!-- 引入Vue.js -->
+<script src="../Vue/vue.js"></script>
+<!-- 引入axios -->
+<script src="../axios/axios.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            goodsList: [], // 存储商品信息的数组
+            searchName: '', // 查询关键词
+            searchCategory: '' // 查询类别
+        },
+        mounted() {
+            // 在组件挂载后执行获取商品信息的操作
+            this.fetchGoods();
+        },
+        methods: {
+            // 获取商品信息函数
+            fetchGoods() {
+                // 发送GET请求获取商品信息
+                axios.get('http://localhost:8080/api/goods', {
+                    params: {
+                        searchName: this.searchName,
+                        searchCategory: this.searchCategory
+                    }
+                }).then(response => {
+                    // 获取到商品信息后更新goodsList数组
+                    this.goodsList = response.data;
+                })
+                    .catch(error => {
+                        // 获取商品信息失败，输出错误信息到控制台
+                        console.error('获取商品信息失败:', error);
+                    });
+            },
+            // 导出为 Excel
+            exportToExcel() {
+                // 发送请求导出数据为 Excel
+                axios.post('http://localhost:8080/api/export/excel', this.goodsList, {
+                    responseType: 'blob', // 指定返回的数据类型为 Blob
+                }).then(response => {
+                    // 创建一个 Blob 对象
+                    const blob = new Blob([response.data], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+                    // 创建一个临时的 URL 对象
+                    const url = window.URL.createObjectURL(blob);
+                    // 创建一个 <a> 元素用于下载
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'goods.xlsx';
+                    // 模拟点击下载
+                    link.click();
+                    // 释放 URL 对象
+                    window.URL.revokeObjectURL(url);
+                })
+                    .catch(error => {
+                        console.error('导出 Excel 失败:', error);
+                    });
+            },
+            // 查询商品信息
+            searchGoods() {
+                this.fetchGoods();
+                // this.searchName = '';
+                // this.searchCategory = '';
+            }
+        }
+    });
+</script>
+</body>
+</html>
