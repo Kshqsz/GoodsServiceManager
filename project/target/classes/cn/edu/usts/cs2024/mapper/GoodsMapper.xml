@@ -4,6 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="cn.edu.usts.cs2024.mapper.GoodsMapper">
+
+    <select id="getGoodsByCriteria" resultType="cn.edu.usts.cs2024.pojo.Goods">
+        select * from javaee.goods
+        <where>
+            <if test="searchName != null and searchName != ''"> and name like concat('%', #{searchName}, '%') </if>
+            <if test="searchCategory != null and searchCategory != ''"> and category = #{searchCategory}</if>
+        </where>
+    </select>
     <insert id="add">
         insert into goods(name, category, origin, price, production_date, manufacturer)
         values(#{name}, #{category}, #{origin}, #{price}, #{productionDate}, #{manufacturer})
@@ -21,13 +29,6 @@
         where id = #{id}
     </update>
 
-    <select id="getGoodsByCriteria" resultType="cn.edu.usts.cs2024.pojo.Goods">
-        select * from javaee.goods
-        <where>
-            <if test="searchName != null and searchName != ''"> and name like concat('%', #{searchName}, '%') </if>
-            <if test="searchCategory != null and searchCategory != ''"> and category = #{searchCategory}</if>
-        </where>
-    </select>
 
     <select id="pageQuery" resultType="cn.edu.usts.cs2024.pojo.Goods">
         select * from javaee.goods

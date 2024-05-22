@@ -3,8 +3,37 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="" />
+    <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiment2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Experiment2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/element.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/last_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/last_login.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +47,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -37,6 +69,7 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectId" id="2f8NFBPaxaESak0HuJZwq5tLaJx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,9 +80,10 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/develop/mp-demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -68,7 +102,31 @@
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\resources\static\last_html" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Experiment2Application">
+  <component name="RunManager" selected="Spring Boot.Experiment2Application (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Experiment2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="experiment2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.usts.cs2024.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Experiment2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="Experiment2" />
       <extension name="coverage">
@@ -91,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Experiment2Application (1)" />
         <item itemvalue="Spring Boot.Experiment2Application" />
       </list>
     </recent_temporary>
@@ -173,11 +232,23 @@
       <workItem from="1715929289546" duration="1910000" />
       <workItem from="1716099292358" duration="122000" />
       <workItem from="1716101820657" duration="367000" />
+      <workItem from="1716365070339" duration="348000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="584" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1715775242214">
@@ -192,38 +263,38 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1716102188916" />
-    <state width="1663" height="73" key="GridCell.Tab.0.bottom" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.0.bottom" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.0.center" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.0.center" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.0.left" timestamp="1715931519513">
+    <state width="1663" height="402" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.0.left" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519513" />
-    <state width="1663" height="73" key="GridCell.Tab.0.right" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.0.right" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.1.bottom" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.1.bottom" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.1.center" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.1.center" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.1.left" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.1.left" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
-    <state width="1663" height="73" key="GridCell.Tab.1.right" timestamp="1715931519516">
+    <state width="1663" height="402" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
+    <state width="1663" height="402" key="GridCell.Tab.1.right" timestamp="1716365421354">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="73" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1715931519516" />
+    <state width="1663" height="402" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716365421354" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
