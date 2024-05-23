@@ -7,6 +7,7 @@ import cn.edu.usts.cs2024.pojo.Result;
 import cn.edu.usts.cs2024.pojo.User;
 import cn.edu.usts.cs2024.service.UserService;
 import cn.edu.usts.cs2024.utils.JwtUtil;
+import cn.edu.usts.cs2024.utils.ThreadLocalUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,4 +52,14 @@ public class UserController {
         return Result.success(users);
     }
 
+    @DeleteMapping("/deleteUser/{id}")
+    public Result deleteUser(@PathVariable Integer id) {
+        Map<String, Object> map = ThreadLocalUtil.get();
+        String username = (String) map.get("username");
+        if (!("admin".equals(username))) {
+            return Result.error("你没有权限删除用户");
+        }
+        userService.deleteUserById(id);
+        return Result.success();
+    }
 }

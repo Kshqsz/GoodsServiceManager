@@ -1,7 +1,9 @@
 package cn.edu.usts.cs2024.controller;
 
 import cn.edu.usts.cs2024.pojo.Goods;
+import cn.edu.usts.cs2024.pojo.Result;
 import cn.edu.usts.cs2024.service.GoodsService;
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -52,6 +54,12 @@ public class GoodsController {
     @PostMapping("/export/excel")
     public void exportToExcel(@RequestBody List<Goods> goodsList, HttpServletResponse response) throws IOException {
         goodsService.export(goodsList, response);
+    }
+
+    @DeleteMapping("/deleteCategory/{category}")
+    public Result deleteCategory(@PathVariable String category) {
+        goodsService.deleteCategory(category);
+        return Result.success();
     }
 }
 

@@ -1,5 +1,6 @@
 package cn.edu.usts.cs2024.interceptor;
 
+import cn.edu.usts.cs2024.utils.ThreadLocalUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import cn.edu.usts.cs2024.utils.JwtUtil;
@@ -16,6 +17,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         try {
             Map<String, Object> claims = JwtUtil.parseToken(token);
             //把业务数据存储到ThreadLocal中
+            ThreadLocalUtil.set(claims);
             //放行
             return true;
         } catch (Exception e) {

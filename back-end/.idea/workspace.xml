@@ -24,6 +24,24 @@
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/interceptor/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/interceptor/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/GoodsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,17 +113,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Experiment2Application (2)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Experiment2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="experiment2" />
       <extension name="coverage">
@@ -245,7 +252,8 @@
       <workItem from="1716422354270" duration="26000" />
       <workItem from="1716424335827" duration="1394000" />
       <workItem from="1716427319212" duration="29000" />
-      <workItem from="1716449542602" duration="8347000" />
+      <workItem from="1716449542602" duration="12225000" />
+      <workItem from="1716470781184" duration="811000" />
     </task>
     <servers />
   </component>
@@ -277,38 +285,38 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1716462100591" />
-    <state width="1663" height="224" key="GridCell.Tab.0.bottom" timestamp="1716463390815">
+    <state width="1663" height="189" key="GridCell.Tab.0.bottom" timestamp="1716470113849">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.0.center" timestamp="1716463390815">
+    <state width="1663" height="189" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
+    <state width="1663" height="189" key="GridCell.Tab.0.center" timestamp="1716470113849">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.0.left" timestamp="1716463390815">
+    <state width="1663" height="189" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
+    <state width="1663" height="189" key="GridCell.Tab.0.left" timestamp="1716470113849">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.0.right" timestamp="1716463390815">
+    <state width="1663" height="189" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
+    <state width="1663" height="189" key="GridCell.Tab.0.right" timestamp="1716470113849">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.1.bottom" timestamp="1716463390815">
+    <state width="1663" height="189" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
+    <state width="1663" height="224" key="GridCell.Tab.1.bottom" timestamp="1716470113828">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.1.center" timestamp="1716463390815">
+    <state width="1663" height="224" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
+    <state width="1663" height="224" key="GridCell.Tab.1.center" timestamp="1716470113828">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.1.left" timestamp="1716463390815">
+    <state width="1663" height="224" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
+    <state width="1663" height="224" key="GridCell.Tab.1.left" timestamp="1716470113828">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
-    <state width="1663" height="224" key="GridCell.Tab.1.right" timestamp="1716463390815">
+    <state width="1663" height="224" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
+    <state width="1663" height="224" key="GridCell.Tab.1.right" timestamp="1716470113828">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716463390815" />
+    <state width="1663" height="224" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>

@@ -2,10 +2,7 @@ package cn.edu.usts.cs2024.mapper;
 
 import cn.edu.usts.cs2024.pojo.RegisterRequest;
 import cn.edu.usts.cs2024.pojo.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -20,4 +17,7 @@ public interface UserMapper {
 
     @Select("select * from users")
     List<User> getUsers();
+
+    @Delete("delete from users where id = #{id}")
+    void deleteUserById(Integer id);
 }

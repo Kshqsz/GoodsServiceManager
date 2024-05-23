@@ -104,4 +104,9 @@ public class GoodsServiceImpl implements GoodsService {
             e.printStackTrace();
         }
     }
+
+    @Override
+    public void deleteCategory(String category) {
+        goodsMapper.deleteCategory(category);
+    }
 }

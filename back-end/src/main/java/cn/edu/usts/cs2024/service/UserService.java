@@ -13,4 +13,6 @@ public interface UserService {
     void register(RegisterRequest registerRequest);
 
     List<User> getUsers();
+
+    void deleteUserById(Integer id);
 }

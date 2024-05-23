@@ -2,6 +2,7 @@
   <div id = "home">
       <h1 class = "float-strat">商品信息管理系统</h1>
       <div class="float-end">
+        <el-button type="info" icon="el-icon-folder-opened" round @click="showCategories()">分类管理</el-button>
         <el-button type="info" icon="el-icon-message" round @click="showUsers()">用户信息</el-button>
         <el-button type="success" round @click="exportToExcel">导出 Excel</el-button>
         <el-button type="primary" round @click="showPrintPreview">打印预览</el-button>
@@ -154,8 +155,34 @@
                 <span>{{ scope.row.username == 'admin' ? '超级管理员': '普通用户'}}</span>
             </template>
         </el-table-column>
+        <el-table-column label="操作">
+            <template slot-scope="scope">
+                <i v-if="scope.row.username == 'admin'" class="el-icon-minus"></i>
+                <el-button v-else type="danger"  icon="el-icon-delete" @click="deleteUser(scope.row.id)">删除</el-button>
+            </template>
+        </el-table-column>
         </el-table>
     </el-dialog>
+
+    <el-drawer
+        title="分类管理"
+        :visible.sync="drawer"
+        direction="rtl">
+        <el-table :data="categoryList">
+            <el-table-column
+                prop="category"
+                label="分类">
+            </el-table-column>
+            <el-table-column label="操作">
+                <template slot-scope="scope">
+                    <el-button type="danger" icon="el-icon-delete" @click="deleteCategory(scope.row.category)">删除</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+
+    </el-drawer>
+
+
     <el-pagination background
                    @size-change = "sizeChange"
                    @current-change = "currentChange"
@@ -163,9 +190,10 @@
                    :page-size="size"
                    :page-sizes="pageSizes"
                    layout="total, sizes, prev, pager, next, jumper"
-                   :total="total"
+                   :total="total  "
                     style="text-align: center">
     </el-pagination>
+
     <div class="echarts-box" id="main"></div>
   </div>
 </template>
@@ -206,17 +234,19 @@ export default {
       goodsList: [],
       curList: [],
       userList: [],
+      categoryList: [],
       searchName: '',
       searchCategory: '',
       dialogFormVisible: false,
       dialogUpdateVisible: false,
       dialogPrintVisible: false,
-      dialogUserVisible: false
+      dialogUserVisible: false,
+      drawer: false
     }
   },
   methods: {
-    getGoods() {
-      axios.get("/goods", {
+    async getGoods() {
+        await axios.get("/goods", {
           params: {
               searchName: this.searchName,
               searchCategory: this.searchCategory,
@@ -259,12 +289,14 @@ export default {
     },
     addGoods() {
         axios.post('/add', this.goods).then(() => {
+            this.getGoods();
             this.pageQuery();
+            this.dialogFormVisible = false;
+            this.getCategories();
             this.$message.success("新增商品成功~");
         }).catch(error => {
             console.log(error);
         })
-        this.dialogFormVisible = false
     },
     deleteGoods(id) {
         this.$confirm('你确定要删除吗?', '提示', {
@@ -273,7 +305,9 @@ export default {
             type: 'warning'
         }).then(() => {
             axios.delete(`/delete/${id}`).then(() => {
+                this.getGoods();
                 this.pageQuery();
+                this.getCategories();
                 this.$message.success("删除商品成功~");
             }).catch(error => {
                 console.log(error)
@@ -290,7 +324,9 @@ export default {
     },
     updateGoods() {
         axios.put('/update', this.goods).then(() => {
+            this.getGoods();
             this.pageQuery();
+            this.getCategories();
             this.$message.success("更新商品成功~");
         }).catch(error => {
             console.log(error);
@@ -372,6 +408,55 @@ export default {
       },
       showUsers() {
         this.dialogUserVisible = true;
+      },
+      deleteUser(id) {
+        this.$confirm('你确定要删除该用户吗?', '温馨提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+        }).then(() => {
+            axios.delete(`/deleteUser/${id}`).then((res) => {
+                if (res.data.code === 0) {
+                    this.getUsers();
+                    this.$message.success("删除用户成功~");
+                } else {
+                    this.$message.error(res.data.message)
+                }
+            }).catch(error => {
+                this.$message.error(error)
+            })
+        })
+      },
+      showCategories() {
+        this.drawer = true;
+        this.getCategories();
+      },
+       deleteCategory(category) {
+        this.$confirm('你确定要删除该分类吗?', '温馨提示', {
+            confirmButtonText: '确定',
+            cancelButtonText: '取消',
+            type: 'warning'
+        }).then( () => {
+            axios.delete(`/deleteCategory/${category}`).then(async (res) => {
+                if (res.data.code === 0) {
+                    await this.getGoods();
+                    this.getCategories(); // 删除成功后更新分类列表
+                    this.$message.success("删除分类成功~");
+                } else {
+                    this.$message.error("服务错误");
+                }
+            }).catch(error => {
+                this.$message.error(error);
+            })
+        })
+      },
+      getCategories() {
+        this.categoryList = [];
+        for (var i = 0; i < this.goodsList.length; i++) {
+            this.categoryList.push(this.goodsList[i].category);
+        }
+        this.categoryList = Array.from(new Set(this.categoryList));
+        this.categoryList = this.categoryList.map(category => ({category: category}));
       }
   },
   mounted() {

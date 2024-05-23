@@ -26,4 +26,7 @@ public interface GoodsMapper {
     Goods getById(Integer id);
 
     void update(Goods goods);
+
+    @Delete("delete from goods where category = #{category}")
+    void deleteCategory(String category);
 }
