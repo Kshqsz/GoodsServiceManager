@@ -2,7 +2,7 @@
   <div id = "home">
       <h1 class = "float-strat">商品信息管理系统</h1>
       <div class="float-end">
-        <el-button type="info" icon="el-icon-message" round @click="getUsers()">用户信息</el-button>
+        <el-button type="info" icon="el-icon-message" round @click="showUsers()">用户信息</el-button>
         <el-button type="success" round @click="exportToExcel">导出 Excel</el-button>
         <el-button type="primary" round @click="showPrintPreview">打印预览</el-button>
       </div>
@@ -369,6 +369,8 @@ export default {
         }).catch(error => {
             this.$message.error(error);
         })
+      },
+      showUsers() {
         this.dialogUserVisible = true;
       }
   },
@@ -377,6 +379,7 @@ export default {
     this.getEcharts();
     this.getGoods();
     this.pageQuery();
+    this.getUsers();
   },
   computed: {
     total() {
