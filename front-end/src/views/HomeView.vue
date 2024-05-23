@@ -35,8 +35,8 @@
 
         <el-table-column label="操作">
             <template slot-scope="scope">
-                <el-button type="primary" round  size="small" @click="getGoodsById(scope.row.id)">编辑</el-button>
-                <el-button type="danger"  round  size="small" @click="deleteGoods(scope.row.id)">删除</el-button>
+                <el-button type="primary" icon="el-icon-edit" round  size="small" @click="getGoodsById(scope.row.id)">编辑</el-button>
+                <el-button type="danger"  icon="el-icon-delete" round  size="small" @click="deleteGoods(scope.row.id)">删除</el-button>
             </template>
         </el-table-column>
     </el-table>
@@ -138,6 +138,7 @@
     <el-dialog title="打印预览" :visible.sync="dialogPrintVisible" width="80%">
       <PrintPreview :goodsList="goodsList" />
     </el-dialog>
+
     <el-pagination background
                    @size-change = "sizeChange"
                    @current-change = "currentChange"
@@ -361,7 +362,6 @@ export default {
     height: 400px;
     padding-top: 50px;
     margin: 0 auto;
-    border: 1px solid #ccc;
 }
 .float-end {
   float: right !important;
