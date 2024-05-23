@@ -108,6 +108,7 @@ export default {
             this.$message.success("注册成功~");
             this.isRegister = false;
             this.loginForm.username = this.registerForm.username;
+            this.loginForm.password = '';
           }).catch(error => {
             this.$message.error(error);
           })
