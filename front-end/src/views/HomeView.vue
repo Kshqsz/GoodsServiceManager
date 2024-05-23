@@ -2,6 +2,7 @@
   <div id = "home">
       <h1 class = "float-strat">商品信息管理系统</h1>
       <div class="float-end">
+        <el-button type="info" icon="el-icon-message" round @click="getUsers()">用户信息</el-button>
         <el-button type="success" round @click="exportToExcel">导出 Excel</el-button>
         <el-button type="primary" round @click="showPrintPreview">打印预览</el-button>
       </div>
@@ -139,6 +140,22 @@
       <PrintPreview :goodsList="goodsList" />
     </el-dialog>
 
+    <el-dialog title="用户信息" :visible.sync="dialogUserVisible">
+        <el-table :data="userList" stripe>
+            <el-table-column prop="id" label="id">
+            <template slot-scope="scope">
+                <span>{{ scope.$index + 1 + (page - 1) * size}}</span>
+            </template>
+        </el-table-column>
+        
+        <el-table-column prop="username" label="用户名"></el-table-column>
+        <el-table-column label="权限">
+            <template slot-scope="scope">
+                <span>{{ scope.row.username == 'admin' ? '超级管理员': '普通用户'}}</span>
+            </template>
+        </el-table-column>
+        </el-table>
+    </el-dialog>
     <el-pagination background
                    @size-change = "sizeChange"
                    @current-change = "currentChange"
@@ -155,7 +172,7 @@
 
 <script>
 import Vue from "vue"
-import axios from "axios"
+import axios from '@/utils/axios';
 import * as echarts from "echarts"
 import BootstrapVue from "bootstrap-vue";
 Vue.use(BootstrapVue)
@@ -179,21 +196,27 @@ export default {
         productionDate: '',
         manufacturer: ''
       },
+      user: {
+        id: '',
+        username: '',
+      },
       page: 1,
       size: 5,
       pageSizes: [3, 5, 10, 20, 50, 100, 200, 300, 400, 500, 1000],
       goodsList: [],
       curList: [],
+      userList: [],
       searchName: '',
       searchCategory: '',
       dialogFormVisible: false,
       dialogUpdateVisible: false,
-      dialogPrintVisible: false
+      dialogPrintVisible: false,
+      dialogUserVisible: false
     }
   },
   methods: {
     getGoods() {
-      axios.get("/api/goods", {
+      axios.get("/goods", {
           params: {
               searchName: this.searchName,
               searchCategory: this.searchCategory,
@@ -216,7 +239,7 @@ export default {
         this.pageQuery();
     },
     pageQuery() {
-        axios.get("/api/page", {
+        axios.get("/page", {
             params: {
                 searchName: this.searchName,
                 searchCategory: this.searchCategory,
@@ -235,7 +258,7 @@ export default {
         });
     },
     addGoods() {
-        axios.post('/api/add', this.goods).then(() => {
+        axios.post('/add', this.goods).then(() => {
             this.pageQuery();
             this.$message.success("新增商品成功~");
         }).catch(error => {
@@ -249,7 +272,7 @@ export default {
             cancelButtonText: '取消',
             type: 'warning'
         }).then(() => {
-            axios.delete(`/api/delete/${id}`).then(() => {
+            axios.delete(`/delete/${id}`).then(() => {
                 this.pageQuery();
                 this.$message.success("删除商品成功~");
             }).catch(error => {
@@ -259,14 +282,14 @@ export default {
     },
     getGoodsById(id) {
         this.dialogUpdateVisible = true;
-        axios.get(`/api/getById/${id}`).then(res => {
+        axios.get(`/getById/${id}`).then(res => {
             this.goods = res.data;
         }).catch(error => {
             console.log(error);
         })
     },
     updateGoods() {
-        axios.put('/api/update', this.goods).then(() => {
+        axios.put('/update', this.goods).then(() => {
             this.pageQuery();
             this.$message.success("更新商品成功~");
         }).catch(error => {
@@ -340,6 +363,14 @@ export default {
       showPrintPreview() {
         this.dialogPrintVisible = true;
       },
+      getUsers() {
+        axios.get('/users').then((res) => {
+            this.userList = res.data.data;
+        }).catch(error => {
+            this.$message.error(error);
+        })
+        this.dialogUserVisible = true;
+      }
   },
   mounted() {
     this.myChart = echarts.init(document.querySelector('#main'));
