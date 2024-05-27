@@ -5,6 +5,7 @@ D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\pojo\Res
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\pojo\User.java
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\pojo\LoginRequest.java
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\mapper\GoodsMapper.java
+D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\utils\ThreadLocalUtil.java
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\controller\GoodsController.java
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\interceptor\LoginInterceptor.java
 D:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\controller\UserController.java

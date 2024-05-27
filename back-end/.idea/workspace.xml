@@ -23,7 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +64,7 @@
   </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="2f8NFBPaxaESak0HuJZwq5tLaJx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,6 +73,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -74,7 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/cn/edu/usts/cs2024/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -82,18 +90,29 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\resources\static\last_html" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\GoodsServiceManager\back-end" />
       <recent name="D:\GitHub\GoodsServiceManager\back-end\src\main\resources\cn\edu\usts\cs2024\mapper" />
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\java\cn\edu\usts\cs2024\pojo" />
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\java\cn\edu\usts\cs2024\config" />
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\java\cn\edu\usts\cs2024\utils" />
-      <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\resources\static\last_html" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Experiment2Application (2)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Experiment2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="experiment2" />
       <extension name="coverage">
@@ -234,7 +253,13 @@
       <workItem from="1716424335827" duration="1394000" />
       <workItem from="1716427319212" duration="29000" />
       <workItem from="1716449542602" duration="12225000" />
-      <workItem from="1716470781184" duration="1978000" />
+      <workItem from="1716470781184" duration="3156000" />
+      <workItem from="1716527519086" duration="1595000" />
+      <workItem from="1716535361079" duration="2182000" />
+      <workItem from="1716539398694" duration="66000" />
+      <workItem from="1716728508145" duration="29000" />
+      <workItem from="1716728570157" duration="13000" />
+      <workItem from="1716817719961" duration="5863000" />
     </task>
     <servers />
   </component>
@@ -254,6 +279,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="446" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1716824146057">
+      <screen x="0" y="0" width="1707" height="1019" />
+    </state>
+    <state x="446" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824146057" />
     <state x="584" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1715775242214">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
@@ -262,42 +291,42 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="93" y="93" width="1521" height="833" key="DiffContextDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
-    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1716462100591">
+    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1716819068748">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1716462100591" />
-    <state width="1663" height="189" key="GridCell.Tab.0.bottom" timestamp="1716470113849">
+    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1716819068748" />
+    <state width="1663" height="227" key="GridCell.Tab.0.bottom" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="189" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
-    <state width="1663" height="189" key="GridCell.Tab.0.center" timestamp="1716470113849">
+    <state width="1663" height="227" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.0.center" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="189" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
-    <state width="1663" height="189" key="GridCell.Tab.0.left" timestamp="1716470113849">
+    <state width="1663" height="227" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.0.left" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="189" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
-    <state width="1663" height="189" key="GridCell.Tab.0.right" timestamp="1716470113849">
+    <state width="1663" height="227" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.0.right" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="189" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113849" />
-    <state width="1663" height="224" key="GridCell.Tab.1.bottom" timestamp="1716470113828">
+    <state width="1663" height="227" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.1.bottom" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
-    <state width="1663" height="224" key="GridCell.Tab.1.center" timestamp="1716470113828">
+    <state width="1663" height="227" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.1.center" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
-    <state width="1663" height="224" key="GridCell.Tab.1.left" timestamp="1716470113828">
+    <state width="1663" height="227" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.1.left" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
-    <state width="1663" height="224" key="GridCell.Tab.1.right" timestamp="1716470113828">
+    <state width="1663" height="227" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="227" key="GridCell.Tab.1.right" timestamp="1716824487283">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="224" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716470113828" />
+    <state width="1663" height="227" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
@@ -310,31 +339,29 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="355" y="154" key="SettingsEditor/0.0.1707.1019@0.0.1707.1019" timestamp="1715775365265" />
-    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1716461450974">
+    <state x="753" y="369" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1716824210506">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716461450974" />
+    <state x="753" y="369" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1707.1019@0.0.1707.1019" timestamp="1716824210506" />
+    <state x="434" y="164" key="com.intellij.database.dbimport.ImportDialog" timestamp="1716824238855">
+      <screen x="0" y="0" width="1707" height="1019" />
+    </state>
+    <state x="434" y="164" key="com.intellij.database.dbimport.ImportDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824238855" />
+    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1716824223921">
+      <screen x="0" y="0" width="1707" height="1019" />
+    </state>
+    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824223921" />
     <state x="93" y="93" width="1521" height="833" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1715780643986">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="93" y="93" width="1521" height="833" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
+    <state x="241" y="119" key="new project wizard" timestamp="1716539462585">
+      <screen x="0" y="0" width="1707" height="1019" />
+    </state>
+    <state x="241" y="119" key="new project wizard/0.0.1707.1019@0.0.1707.1019" timestamp="1716539462585" />
     <state x="516" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1715229519569">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="516" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1707.1019@0.0.1707.1019" timestamp="1715229519569" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java</url>
-          <line>14</line>
-          <properties class="cn.edu.usts.cs2024.mapper.GoodsMapper" method="pageQuery">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
