@@ -6,13 +6,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        token: ''
+        token: '',
+        username: '',
     },
     getters: {
     },
     mutations: {
         setToken(state, token) {
             state.token = token;
+        },
+        setUsername(state, username) {
+            state.username = username;
         }
     },
     plugins: [createPersistedState()]

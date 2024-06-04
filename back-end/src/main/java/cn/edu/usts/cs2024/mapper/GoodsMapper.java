@@ -29,4 +29,7 @@ public interface GoodsMapper {
 
     @Delete("delete from goods where category = #{category}")
     void deleteCategory(String category);
+
+    @Select("select * from goods where category = #{category}")
+    List<Goods> getGoodsByCategory(String category);
 }

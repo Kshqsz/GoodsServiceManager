@@ -24,4 +24,6 @@ public interface GoodsService {
     void export(List<Goods> goodsList, HttpServletResponse response) throws IOException;
 
     void deleteCategory(String category);
+
+    List<Goods> getGoodsByCategory(String category);
 }

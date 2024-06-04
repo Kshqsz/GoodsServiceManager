@@ -23,13 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +88,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../develop/big-event" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -102,13 +108,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Experiment2Application (2)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,6 +268,12 @@
       <workItem from="1716728508145" duration="29000" />
       <workItem from="1716728570157" duration="13000" />
       <workItem from="1716817719961" duration="5863000" />
+      <workItem from="1716861414923" duration="2000" />
+      <workItem from="1716910051099" duration="466000" />
+      <workItem from="1717419783510" duration="151000" />
+      <workItem from="1717493298321" duration="916000" />
+      <workItem from="1717498851579" duration="3584000" />
+      <workItem from="1717510673550" duration="3886000" />
     </task>
     <servers />
   </component>
@@ -291,42 +305,42 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="93" y="93" width="1521" height="833" key="DiffContextDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
-    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1716819068748">
+    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1717511695438">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1716819068748" />
-    <state width="1663" height="227" key="GridCell.Tab.0.bottom" timestamp="1716824487283">
+    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1717511695438" />
+    <state width="1663" height="638" key="GridCell.Tab.0.bottom" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.0.center" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.0.center" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.0.left" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.0.left" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.0.right" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.0.right" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.1.bottom" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.1.bottom" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.1.center" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.1.center" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.1.left" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.1.left" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
-    <state width="1663" height="227" key="GridCell.Tab.1.right" timestamp="1716824487283">
+    <state width="1663" height="638" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1663" height="638" key="GridCell.Tab.1.right" timestamp="1717517172926">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="227" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1716824487283" />
+    <state width="1663" height="638" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>

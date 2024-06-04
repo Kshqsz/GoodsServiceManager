@@ -109,4 +109,9 @@ public class GoodsServiceImpl implements GoodsService {
     public void deleteCategory(String category) {
         goodsMapper.deleteCategory(category);
     }
+
+    @Override
+    public List<Goods> getGoodsByCategory(String category) {
+        return goodsMapper.getGoodsByCategory(category);
+    }
 }

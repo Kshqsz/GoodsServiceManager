@@ -28,10 +28,10 @@
       <!-- 登录表单 -->
       <el-form v-show="isRegister == false" label-width = "80px" :rules="rules" :model="loginForm" ref="loginForm">
           <el-form-item label = "用户名" prop="username">
-              <el-input prefix-icon="el-icon-user" v-model = "loginForm.username" placeholder = "请输入用户名"></el-input>
+              <el-input prefix-icon="el-icon-user" v-model = "loginForm.username" placeholder = "请输入用户名" @keyup.enter.native="login"></el-input>
           </el-form-item>
           <el-form-item label = "密码" prop="password">
-              <el-input prefix-icon="el-icon-lock" type = "password" v-model = "loginForm.password" placeholder = "请输入密码"></el-input>
+              <el-input prefix-icon="el-icon-lock" type = "password" v-model = "loginForm.password" placeholder = "请输入密码" @keyup.enter.native="login"></el-input>
           </el-form-item>
           <el-form-item>
               <el-button type = "primary" @click = "login">登录</el-button>
@@ -86,10 +86,10 @@ export default {
     login() {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
-          axios.post("/login", this.loginForm)
-          .then(res => {
+          axios.post("/login", this.loginForm).then(res => {
             if (res.data.code === 0) {
               this.$store.commit('setToken', res.data.data);
+              this.$store.commit('setUsername', this.loginForm.username);
               this.$router.push('/home');
               this.$message.success("登录成功~ 欢迎你, " + this.loginForm.username)
             } else {

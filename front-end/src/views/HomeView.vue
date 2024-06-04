@@ -1,488 +1,68 @@
 <template>
   <div id = "home">
-      <h1 class = "float-strat">商品信息管理系统</h1>
-      <div class="float-end">
-        <el-button type="info" icon="el-icon-folder-opened" round @click="showCategories()">分类管理</el-button>
-        <el-button type="info" icon="el-icon-message" round @click="showUsers()">用户信息</el-button>
-        <el-button type="success" round @click="exportToExcel">导出 Excel</el-button>
-        <el-button type="primary" round @click="showPrintPreview">打印预览</el-button>
-      </div>
-    <!-- 查询条件输入框 -->
-    <div class="row mb-3">
-        <div class="col-md-2">
-            <el-input placeholder="商品名称" v-model="searchName" @keyup.enter.native="getGoods"></el-input>
-        </div>
-        <div class="col-md-2">
-            <el-input placeholder="类别" v-model="searchCategory" @keyup.enter.native="getGoods"></el-input>
-        </div>
-        <div class="col-md-2">
-            <el-button type="primary" round @click="getGoods">查询</el-button>
-        </div>
-    </div>
-    <el-table :data="curList"
-              border
-              style="width: 100%">
-        <el-table-column prop="id" label="id">
-            <template slot-scope="scope">
-                <span>{{ scope.$index + 1 + (page - 1) * size}}</span>
-            </template>
-        </el-table-column>
+    <el-container class="layout-container">
+        <el-aside width="200px">
+            <div class="el-aside__logo"></div>
+            <el-menu active-text-color="#ffd04b" router>
+                <el-menu-item index="/home">
+                    <i class="el-icon-shopping-cart-2"></i>
+                    <span>商品管理</span>
+                </el-menu-item>
+                <el-menu-item index="/category">
+                    <i class="el-icon-folder-opened"></i>
+                    <span>分类管理</span>
+                </el-menu-item>
+                <el-menu-item index="/user">
+                    <i class="el-icon-user"></i>
+                    <span>用户管理</span>
+                </el-menu-item>
+            </el-menu>
+        </el-aside>
+        <el-container>
+            <el-header>
+                <div>欢迎你~ <strong>{{ usernmae }}</strong></div>
+            </el-header>  
+            <el-main>
+                <router-view></router-view>
+            </el-main>
 
-        <el-table-column prop="name" label="名称"></el-table-column>
-        <el-table-column prop="category" label="分类"></el-table-column>
-        <el-table-column prop="origin" label="产地"></el-table-column>
-        <el-table-column prop="price" label="价格"></el-table-column>
-        <el-table-column prop="productionDate" label="生产日期"></el-table-column>
-        <el-table-column prop="manufacturer" label="生产商"></el-table-column>
+        </el-container>
+    
+    </el-container>
 
-        <el-table-column label="操作">
-            <template slot-scope="scope">
-                <el-button type="primary" icon="el-icon-edit" round  size="small" @click="getGoodsById(scope.row.id)">编辑</el-button>
-                <el-button type="danger"  icon="el-icon-delete" round  size="small" @click="deleteGoods(scope.row.id)">删除</el-button>
-            </template>
-        </el-table-column>
-    </el-table>
-    <el-dialog title="编辑商品" :visible.sync="dialogUpdateVisible">
-        <el-form :model="goods">
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="id" :label-width="'50px'">
-                        <el-input v-model="goods.id" style="width: 240px;" :disabled="true"></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="名称" :label-width="'50px'">
-                        <el-input autocomplete="off" v-model="goods.name" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="分类" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.category" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="产地" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.origin" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="价格" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.price" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="生产日期">
-                        <el-date-picker type="date" placeholder="选择日期" v-model="goods.productionDate" style="width: 240px"></el-date-picker>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-form-item label="生产商">
-                <el-input  autocomplete="off" v-model="goods.manufacturer" style="width: 240px;"></el-input>
-            </el-form-item>
-        </el-form>
-        <div slot="footer" class="dialog-footer">
-            <el-button @click="dialogUpdateVisible = false">取 消</el-button>
-            <el-button @click="updateGoods" type="primary">确 定</el-button>
-        </div>
-    </el-dialog>
-    <div class = "float-end">
-        <el-button type="success" round @click="clearGoods">新增商品</el-button>
-    </div>
-    <el-dialog title="新增商品" :visible.sync="dialogFormVisible">
-        <el-form :model="goods">
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="名称" :label-width="'50px'">
-                        <el-input autocomplete="off" v-model="goods.name" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="分类" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.category" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="产地" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.origin" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="价格" :label-width="'50px'">
-                        <el-input  autocomplete="off" v-model="goods.price" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-            <el-row>
-                <el-col :span="12">
-                    <el-form-item label="生产日期">
-                        <el-date-picker type="date" placeholder="选择日期" v-model="goods.productionDate" style="width: 240px"></el-date-picker>
-                    </el-form-item>
-                </el-col>
-                <el-col :span="12">
-                    <el-form-item label="生产商">
-                        <el-input  autocomplete="off" v-model="goods.manufacturer" style="width: 240px;"></el-input>
-                    </el-form-item>
-                </el-col>
-            </el-row>
-        </el-form>
-        <div slot="footer" class="dialog-footer">
-            <el-button @click="dialogFormVisible = false">取 消</el-button>
-            <el-button type="primary" @click="addGoods">确 定</el-button>
-        </div>
-    </el-dialog>
-
-    <el-dialog title="打印预览" :visible.sync="dialogPrintVisible" width="80%">
-      <PrintPreview :goodsList="goodsList" />
-    </el-dialog>
-
-    <el-dialog title="用户信息" :visible.sync="dialogUserVisible">
-        <el-table :data="userList" stripe>
-            <el-table-column prop="id" label="id">
-            <template slot-scope="scope">
-                <span>{{ scope.$index + 1 + (page - 1) * size}}</span>
-            </template>
-        </el-table-column>
-        
-        <el-table-column prop="username" label="用户名"></el-table-column>
-        <el-table-column label="权限">
-            <template slot-scope="scope">
-                <span>{{ scope.row.username == 'admin' ? '超级管理员': '普通用户'}}</span>
-            </template>
-        </el-table-column>
-        <el-table-column label="操作">
-            <template slot-scope="scope">
-                <i v-if="scope.row.username == 'admin'" class="el-icon-minus"></i>
-                <el-button v-else type="danger"  icon="el-icon-delete" @click="deleteUser(scope.row.id)">删除</el-button>
-            </template>
-        </el-table-column>
-        </el-table>
-    </el-dialog>
-
-    <el-drawer
-        title="分类管理"
-        :visible.sync="drawer"
-        direction="rtl">
-        <el-table :data="categoryList">
-            <el-table-column
-                prop="category"
-                label="分类">
-            </el-table-column>
-            <el-table-column label="操作">
-                <template slot-scope="scope">
-                    <el-button type="danger" icon="el-icon-delete" @click="deleteCategory(scope.row.category)">删除</el-button>
-                </template>
-            </el-table-column>
-        </el-table>
-
-    </el-drawer>
-
-
-    <el-pagination background
-                   @size-change = "sizeChange"
-                   @current-change = "currentChange"
-                   :current-page="page"
-                   :page-size="size"
-                   :page-sizes="pageSizes"
-                   layout="total, sizes, prev, pager, next, jumper"
-                   :total="total  "
-                    style="text-align: center">
-    </el-pagination>
-
-    <div class="echarts-box" id="main"></div>
   </div>
 </template>
 
 <script>
-import Vue from "vue"
-import axios from '@/utils/axios';
-import * as echarts from "echarts"
-import BootstrapVue from "bootstrap-vue";
-Vue.use(BootstrapVue)
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import * as XLSX from 'xlsx'
-
-import PrintPreview from './PrintPreview.vue';
+import store from '@/store'
 export default {
-  components: {
-    PrintPreview
-  },  
+
   data() {
     return {
-      goods: {
-        id: '',
-        name: '',
-        category: '',
-        origin: '',
-        price: '',
-        productionDate: '',
-        manufacturer: ''
-      },
-      user: {
-        id: '',
-        username: '',
-      },
-      page: 1,
-      size: 5,
-      pageSizes: [3, 5, 10, 20, 50, 100, 200, 300, 400, 500, 1000],
-      goodsList: [],
-      curList: [],
-      userList: [],
-      categoryList: [],
-      searchName: '',
-      searchCategory: '',
-      dialogFormVisible: false,
-      dialogUpdateVisible: false,
-      dialogPrintVisible: false,
-      dialogUserVisible: false,
-      drawer: false
-    }
-  },
-  methods: {
-    async getGoods() {
-        await axios.get("/goods", {
-          params: {
-              searchName: this.searchName,
-              searchCategory: this.searchCategory,
-          }
-      }).then(res => {
-          this.goodsList = res.data;
-          this.page = 1;
-          this.pageQuery()
-      }).catch(error => {
-          console.error("获取商品失败", error)
-      })
-    },
-    currentChange(val) {
-        this.page = val;
-        this.pageQuery();
-    },
-    sizeChange(val) {
-        this.size = val;
-        this.page = 1;
-        this.pageQuery();
-    },
-    pageQuery() {
-        axios.get("/page", {
-            params: {
-                searchName: this.searchName,
-                searchCategory: this.searchCategory,
-                page: this.page,
-                size: this.size
-            }
-        }).then(res => {
-            this.curList = res.data;
-            this.myChart.setOption({
-                series: [{
-                    data: this.curList.map(item => ({value: item.price, name: item.name}))
-                }]
-            })
-        }).catch(error => {
-            console.log(error);
-        });
-    },
-    addGoods() {
-        axios.post('/add', this.goods).then(() => {
-            this.getGoods();
-            this.pageQuery();
-            this.dialogFormVisible = false;
-            this.getCategories();
-            this.$message.success("新增商品成功~");
-        }).catch(error => {
-            console.log(error);
-        })
-    },
-    deleteGoods(id) {
-        this.$confirm('你确定要删除吗?', '提示', {
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
-            type: 'warning'
-        }).then(() => {
-            axios.delete(`/delete/${id}`).then(() => {
-                this.getGoods();
-                this.pageQuery();
-                this.getCategories();
-                this.$message.success("删除商品成功~");
-            }).catch(error => {
-                console.log(error)
-            })
-        })
-    },
-    getGoodsById(id) {
-        this.dialogUpdateVisible = true;
-        axios.get(`/getById/${id}`).then(res => {
-            this.goods = res.data;
-        }).catch(error => {
-            console.log(error);
-        })
-    },
-    updateGoods() {
-        axios.put('/update', this.goods).then(() => {
-            this.getGoods();
-            this.pageQuery();
-            this.getCategories();
-            this.$message.success("更新商品成功~");
-        }).catch(error => {
-            console.log(error);
-        });
-        this.dialogUpdateVisible = false;
-    },
-    clearGoods() {
-        this.goods = {
-            id: '',
-            name: '',
-            category: '',
-            origin: '',
-            price: '',
-            productionDate: '',
-            manufacturer: ''
-        };
-        this.dialogFormVisible = true;
-    },
-    
-    // 导出为 Excel
-    exportToExcel() {
-        const workSheet = XLSX.utils.json_to_sheet(this.goodsList);
-        
-        // 手动修改第一行数据
-        workSheet["A1"] = { v: "id" };
-        workSheet["B1"] = { v: "名称" };
-        workSheet["C1"] = { v: "分类" };
-        workSheet["D1"] = { v: "产地" };
-        workSheet["E1"] = { v: "价格" };
-        workSheet["F1"] = { v: "生产日期" };
-        workSheet["G1"] = { v: "生产商" };
-
-        const colWidths = [{ wpx: 50 }, { wpx: 80 }, { wpx: 80 }, { wpx: 80 }, { wpx: 50 }, { wpx: 100 }, { wpx: 80 }];
-        workSheet['!cols'] = colWidths;
-  
-        const workBook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workBook, workSheet, 'Sheet1');
-        XLSX.writeFile(workBook, 'goods.xlsx');
-    },
-    getEcharts() {
-        // 指定图表的配置项和数据
-        this.myChart.setOption({
-            title: {
-                text: '当前页商品展示',
-                left: 'center'
-            },
-            tooltip: {
-                trigger: 'item'
-            },
-            legend: {
-                orient: 'vertical',
-                left: 'left'
-            },
-            series: [{
-                name: '消费名称',
-                type: 'pie',
-                radius: '60%',
-                data: [],
-                emphasis: {
-                    itemStyle: {
-                        shadowBlur: 10,
-                        shadowOffsetX: 0,
-                        shadowColor: 'rgba(0,0,0,0.5)'
-                    }
-                }
-            }
-            ]
-        })
-      },
-      showPrintPreview() {
-        this.dialogPrintVisible = true;
-      },
-      getUsers() {
-        axios.get('/users').then((res) => {
-            this.userList = res.data.data;
-        }).catch(error => {
-            this.$message.error(error);
-        })
-      },
-      showUsers() {
-        this.dialogUserVisible = true;
-      },
-      deleteUser(id) {
-        this.$confirm('你确定要删除该用户吗?', '温馨提示', {
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
-            type: 'warning'
-        }).then(() => {
-            axios.delete(`/deleteUser/${id}`).then((res) => {
-                if (res.data.code === 0) {
-                    this.getUsers();
-                    this.$message.success("删除用户成功~");
-                } else {
-                    this.$message.error(res.data.message)
-                }
-            }).catch(error => {
-                this.$message.error(error)
-            })
-        })
-      },
-      showCategories() {
-        this.drawer = true;
-        this.getCategories();
-      },
-       deleteCategory(category) {
-        this.$confirm('你确定要删除该分类吗?', '温馨提示', {
-            confirmButtonText: '确定',
-            cancelButtonText: '取消',
-            type: 'warning'
-        }).then( () => {
-            axios.delete(`/deleteCategory/${category}`).then(async (res) => {
-                if (res.data.code === 0) {
-                    await this.getGoods();
-                    this.getCategories(); // 删除成功后更新分类列表
-                    this.$message.success("删除分类成功~");
-                } else {
-                    this.$message.error("服务错误");
-                }
-            }).catch(error => {
-                this.$message.error(error);
-            })
-        })
-      },
-      getCategories() {
-        this.categoryList = [];
-        for (var i = 0; i < this.goodsList.length; i++) {
-            this.categoryList.push(this.goodsList[i].category);
-        }
-        this.categoryList = Array.from(new Set(this.categoryList));
-        this.categoryList = this.categoryList.map(category => ({category: category}));
-      }
-  },
-  mounted() {
-    this.myChart = echarts.init(document.querySelector('#main'));
-    this.getEcharts();
-    this.getGoods();
-    this.pageQuery();
-    this.getUsers();
-  },
-  computed: {
-    total() {
-      let tol = this.goodsList.length;
-      return tol;
+      usernmae: store.state.username,  
     }
   }
 }
 </script>
 
-<style>
-.echarts-box {
-    width: 600px;
-    height: 400px;
-    padding-top: 50px;
-    margin: 0 auto;
-}
-.float-end {
-  float: right !important;
+<style lang="scss" scoped>
+.layout-container {
+    height: 100vh;
+    .el-aside {
+        &__logo {
+            height: 120px;
+            background: url('@/assets/logo.jpg') no-repeat center / 120px auto;
+        }
+        .el-menu {
+            border-right: none;
+        }
+    }
+
+    .el-header {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 </style>

@@ -61,6 +61,12 @@ public class GoodsController {
         goodsService.deleteCategory(category);
         return Result.success();
     }
+
+    @GetMapping("/getGoodsByCategory/{category}")
+    public Result<List<Goods>> getGoodsByCategory(@PathVariable String category) {
+        List<Goods> goodsList = goodsService.getGoodsByCategory(category);
+        return Result.success(goodsList);
+    }
 }
 
 
