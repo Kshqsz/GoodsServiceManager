@@ -214,23 +214,23 @@
           this.pageQuery();
       },
       pageQuery() {
-          axios.get("/page", {
-              params: {
-                  searchName: this.searchName,
-                  searchCategory: this.searchCategory,
-                  page: this.page,
-                  size: this.size
-              }
-          }).then(res => {
-              this.curList = res.data;
-              this.myChart.setOption({
-                  series: [{
-                      data: this.curList.map(item => ({value: item.price, name: item.name}))
-                  }]
-              })
-          }).catch(error => {
-              console.log(error);
-          });
+        axios.get("/page", {
+            params: {
+                searchName: this.searchName,
+                searchCategory: this.searchCategory,
+                page: this.page,
+                size: this.size
+            }
+        }).then(res => {
+            this.curList = res.data;
+            this.myChart.setOption({
+                series: [{
+                    data: this.curList.map(item => ({value: item.price, name: item.name}))
+                }]
+            })
+        }).catch(error => {
+            console.log(error);
+        });
       },
       addGoods() {
           axios.post('/add', this.goods).then(() => {

@@ -144,7 +144,7 @@ export default {
         }).then( () => {
             axios.delete(`/deleteCategory/${category}`).then(async (res) => {
                 if (res.data.code === 0) {
-                    await this.getGoods(); // 删除成功后更新分类列表
+                    await this.getGoods(); // after the delete, update the categoryList
                     this.$message.success("删除分类成功~");
                 } else {
                     this.$message.error("服务错误");

@@ -24,18 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/GoodsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/HomeView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +80,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../develop/big-event" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -108,15 +100,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Experiment2Application (2)">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -274,6 +264,17 @@
       <workItem from="1717493298321" duration="916000" />
       <workItem from="1717498851579" duration="3584000" />
       <workItem from="1717510673550" duration="3886000" />
+      <workItem from="1717569797748" duration="27000" />
+      <workItem from="1717571715695" duration="566000" />
+      <workItem from="1717579755657" duration="187000" />
+      <workItem from="1717580327861" duration="1166000" />
+      <workItem from="1717584866844" duration="604000" />
+      <workItem from="1717632609758" duration="173000" />
+      <workItem from="1717632981748" duration="2995000" />
+      <workItem from="1717637337510" duration="19000" />
+      <workItem from="1717738023997" duration="24000" />
+      <workItem from="1717832619391" duration="16000" />
+      <workItem from="1718025045628" duration="594000" />
     </task>
     <servers />
   </component>
@@ -305,42 +306,42 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="93" y="93" width="1521" height="833" key="DiffContextDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
-    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1717511695438">
+    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1717636494051">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1717511695438" />
-    <state width="1663" height="638" key="GridCell.Tab.0.bottom" timestamp="1717517172926">
+    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1717636494051" />
+    <state width="1649" height="224" key="GridCell.Tab.0.bottom" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.0.center" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.0.center" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.0.left" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.0.left" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.0.right" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.0.right" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.1.bottom" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.1.bottom" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.1.center" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.1.center" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.1.left" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.1.left" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
-    <state width="1663" height="638" key="GridCell.Tab.1.right" timestamp="1717517172926">
+    <state width="1649" height="224" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
+    <state width="1649" height="224" key="GridCell.Tab.1.right" timestamp="1717637260252">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state width="1663" height="638" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717517172926" />
+    <state width="1649" height="224" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
@@ -361,10 +362,10 @@
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
     <state x="434" y="164" key="com.intellij.database.dbimport.ImportDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824238855" />
-    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1716824223921">
+    <state x="697" y="324" width="312" height="376" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1717637244983">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
-    <state x="697" y="324" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824223921" />
+    <state x="697" y="324" width="312" height="376" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1717637244983" />
     <state x="93" y="93" width="1521" height="833" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1715780643986">
       <screen x="0" y="0" width="1707" height="1019" />
     </state>
