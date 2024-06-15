@@ -15,6 +15,19 @@
           <el-input prefix-icon="el-icon-lock" type = "password" v-model="registerForm.rePassword" placeholder="请再次输入密码"></el-input>
         </el-form-item>
         <el-form-item>
+              <el-row :span="24">
+                <el-col :span="8">
+                  <el-input placeholder="请输入验证码" v-model="inputCode" ></el-input>
+                </el-col>
+                <el-col :span="8">
+                  <div @click="refreshCode"> <s-identify :identifyCode="identifyCode"></s-identify> </div>
+                </el-col>
+                <el-col :span="8">
+                  <el-link @click="refreshCode"><span style="color: blue;">换一张?</span></el-link>
+                </el-col>
+              </el-row>
+        </el-form-item>
+        <el-form-item>
           <el-link type="info" @click="isRegister = false" style = "margin-right: 150px;">
             ← 返回
           </el-link>
@@ -47,7 +60,9 @@
 
 <script>
 import axios from '@/utils/axios';
+import SIdentify from "@/components/SIdentify"
 export default {
+  components: { SIdentify },
   data() {
     var checkRePassword = (rule, value, callback) => {
         if (value === '') {
@@ -59,6 +74,9 @@ export default {
         }
     };
     return {
+      identifyCodes: '1234567890abcdefjhijklinopqrsduvwxyz',//随机串内容
+      identifyCode: '',
+      inputCode:'',
       isRegister: false,
       registerForm: {
         username: '',
@@ -82,6 +100,10 @@ export default {
       }
     }
   },
+  mounted() {
+    this.identifyCode = ''
+    this.makeCode(this.identifyCodes, 4)
+  },
   methods: {
     login() {
       this.$refs.loginForm.validate((valid) => {
@@ -102,6 +124,10 @@ export default {
       })
     },
     register() {
+      if (this.inputCode.toLowerCase() !== this.identifyCode.toLowerCase()) {
+          this.$message.error("验证码错误");
+          return;
+      }
       this.$refs.registerForm.validate((valid) => {
         if (valid) {
           axios.post('/register', this.registerForm).then((res) => {
@@ -120,6 +146,18 @@ export default {
           this.$message.error("请正确填写注册信息");
         }
       })
+    },
+    refreshCode () {
+      this.identifyCode = ''
+      this.makeCode(this.identifyCodes, 4)
+    },
+    makeCode (o, l) {
+      for (let i = 0; i < l; i++) {
+        this.identifyCode += this.identifyCodes[this.randomNum(0, this.identifyCodes.length)]
+      }
+    },
+    randomNum (min, max) {
+      return Math.floor(Math.random() * (max - min) + min)
     }
   }
 }

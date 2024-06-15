@@ -9,7 +9,6 @@ import cn.edu.usts.cs2024.service.UserService;
 import cn.edu.usts.cs2024.utils.JwtUtil;
 import cn.edu.usts.cs2024.utils.ThreadLocalUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -50,7 +49,6 @@ public class UserController {
         userService.register(registerRequest);
         return Result.success();
     }
-
     @GetMapping("/users")
     public Result<List<User>> getUsers() {
         List<User> users = userService.getUsers();
