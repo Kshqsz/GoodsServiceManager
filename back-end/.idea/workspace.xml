@@ -23,11 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/utils/CheckCodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5651326f-0b56-4394-8f4e-66a344300fc5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5651326f-0b56-4394-8f4e-66a344300fc5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a7dee46-9e92-446c-82c0-1fa0de7adef9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a7dee46-9e92-446c-82c0-1fa0de7adef9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/GoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +66,16 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
         <option name="localRepository" value="D:\develop\apache-maven-3.6.1\mvn_repo" />
-        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\develop\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="jdkForImporter" value="1.8" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -64,29 +83,40 @@
     <option name="jreName" value="1.8" />
     <option name="skipTests" value="true" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2f8NFBPaxaESak0HuJZwq5tLaJx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.Experiment2Application (2).executor": "Run",
+    "Spring Boot.Experiment2Application.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/develop/hmall",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\GoodsServiceManager\back-end" />
@@ -96,56 +126,46 @@
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\java\cn\edu\usts\cs2024\utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\GoodsServiceManager\back-end\src\main\java\cn\edu\usts\cs2024\utils" />
       <recent name="C:\Users\24564\Desktop\main\JavaEE\experiment-project\Experiment2\src\main\resources\static\last_html" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Experiment2Application (2)">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.Experiment2Application">
     <configuration name="Experiment2Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="experiment2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.edu.usts.cs2024.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Experiment2Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="back-end" />
+      <module name="experiment2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.edu.usts.cs2024.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Experiment2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="Experiment2" />
+      <module name="experiment2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cn.edu.usts.cs2024.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.edu.usts.cs2024.Experiment2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,9 +179,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Experiment2Application" />
         <item itemvalue="Spring Boot.Experiment2Application (2)" />
         <item itemvalue="Spring Boot.Experiment2Application (1)" />
-        <item itemvalue="Spring Boot.Experiment2Application" />
       </list>
     </recent_temporary>
   </component>
@@ -275,6 +295,10 @@
       <workItem from="1717738023997" duration="24000" />
       <workItem from="1717832619391" duration="16000" />
       <workItem from="1718025045628" duration="594000" />
+      <workItem from="1718346044063" duration="27000" />
+      <workItem from="1718346143316" duration="359000" />
+      <workItem from="1718346632223" duration="63000" />
+      <workItem from="1718443820152" duration="3759000" />
     </task>
     <servers />
   </component>
@@ -291,92 +315,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="446" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1716824146057">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="446" y="168" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824146057" />
-    <state x="584" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1715775242214">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="584" y="256" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715775242214" />
-    <state x="93" y="93" width="1521" height="833" key="DiffContextDialog" timestamp="1715780643986">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="93" y="93" width="1521" height="833" key="DiffContextDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
-    <state x="634" y="264" key="FileChooserDialogImpl" timestamp="1717636494051">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="634" y="264" key="FileChooserDialogImpl/0.0.1707.1019@0.0.1707.1019" timestamp="1717636494051" />
-    <state width="1649" height="224" key="GridCell.Tab.0.bottom" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.0.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.0.center" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.0.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.0.left" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.0.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.0.right" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.0.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.1.bottom" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.1.bottom/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.1.center" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.1.center/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.1.left" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.1.left/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="1649" height="224" key="GridCell.Tab.1.right" timestamp="1717637260252">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="1649" height="224" key="GridCell.Tab.1.right/0.0.1707.1019@0.0.1707.1019" timestamp="1717637260252" />
-    <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1715214475881">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state width="218" height="477" key="HiddenNamespacesPopup/0.0.1707.1019@0.0.1707.1019" timestamp="1715214475881" />
-    <state x="384" y="164" key="Maven.ArtifactSearchDialog" timestamp="1715774871556">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="384" y="164" key="Maven.ArtifactSearchDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715774871556" />
-    <state x="355" y="154" key="SettingsEditor" timestamp="1715775365265">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="355" y="154" key="SettingsEditor/0.0.1707.1019@0.0.1707.1019" timestamp="1715775365265" />
-    <state x="753" y="369" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1716824210506">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="753" y="369" key="com.intellij.database.actions.DdlActions$CreateObject$1/0.0.1707.1019@0.0.1707.1019" timestamp="1716824210506" />
-    <state x="434" y="164" key="com.intellij.database.dbimport.ImportDialog" timestamp="1716824238855">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="434" y="164" key="com.intellij.database.dbimport.ImportDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1716824238855" />
-    <state x="697" y="324" width="312" height="376" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1717637244983">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="697" y="324" width="312" height="376" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1717637244983" />
-    <state x="93" y="93" width="1521" height="833" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1715780643986">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="93" y="93" width="1521" height="833" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1707.1019@0.0.1707.1019" timestamp="1715780643986" />
-    <state x="241" y="119" key="new project wizard" timestamp="1716539462585">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="241" y="119" key="new project wizard/0.0.1707.1019@0.0.1707.1019" timestamp="1716539462585" />
-    <state x="516" y="220" width="672" height="678" key="search.everywhere.popup" timestamp="1715229519569">
-      <screen x="0" y="0" width="1707" height="1019" />
-    </state>
-    <state x="516" y="220" width="672" height="678" key="search.everywhere.popup/0.0.1707.1019@0.0.1707.1019" timestamp="1715229519569" />
   </component>
 </project>

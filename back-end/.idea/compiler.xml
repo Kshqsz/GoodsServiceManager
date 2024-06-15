@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringMvc" />
         <module name="experiment2" />
-        <module name="back-end" />
         <module name="Experiment2" />
       </profile>
     </annotationProcessing>

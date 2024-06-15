@@ -104,11 +104,15 @@ export default {
     register() {
       this.$refs.registerForm.validate((valid) => {
         if (valid) {
-          axios.post('/register', this.registerForm).then(() => {
-            this.$message.success("注册成功~");
-            this.isRegister = false;
-            this.loginForm.username = this.registerForm.username;
-            this.loginForm.password = '';
+          axios.post('/register', this.registerForm).then((res) => {
+            if (res.data.code === 0) {
+              this.$message.success("注册成功~");
+              this.isRegister = false;
+              this.loginForm.username = this.registerForm.username;
+              this.loginForm.password = '';
+            } else {
+              this.$message.error(res.data.message);
+            }
           }).catch(error => {
             this.$message.error(error);
           })

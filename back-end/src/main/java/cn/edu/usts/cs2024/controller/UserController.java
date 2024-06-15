@@ -8,6 +8,7 @@ import cn.edu.usts.cs2024.pojo.User;
 import cn.edu.usts.cs2024.service.UserService;
 import cn.edu.usts.cs2024.utils.JwtUtil;
 import cn.edu.usts.cs2024.utils.ThreadLocalUtil;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,10 +17,10 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RequiredArgsConstructor
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
     @PostMapping("/login")
     public Result login(@RequestBody LoginRequest loginRequest) {
@@ -41,6 +42,10 @@ public class UserController {
     public Result register(@RequestBody RegisterRequest registerRequest) {
         if (!registerRequest.getPassword().equals(registerRequest.getRePassword())) {
             return Result.error("两次密码输入不一致");
+        }
+        User u = userService.getUserByUsername(registerRequest.getUsername());
+        if (u != null) {
+            return Result.error("用户名已存在");
         }
         userService.register(registerRequest);
         return Result.success();

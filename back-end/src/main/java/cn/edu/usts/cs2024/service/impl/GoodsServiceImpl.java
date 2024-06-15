@@ -61,49 +61,6 @@ public class GoodsServiceImpl implements GoodsService {
         goodsMapper.update(goods);
     }
 
-    @Override
-    public void export(List<Goods> goodsList, HttpServletResponse response) throws IOException {
-        OutputStream out = response.getOutputStream();
-
-        XSSFWorkbook excel = new XSSFWorkbook();
-
-        XSSFSheet sheet = excel.createSheet();
-        XSSFRow row = sheet.createRow(0);
-        row.createCell(0).setCellValue("id");
-        row.createCell(1).setCellValue("名称");
-        row.createCell(2).setCellValue("种类");
-        row.createCell(3).setCellValue("产地");
-        row.createCell(4).setCellValue("价格");
-        row.createCell(5).setCellValue("生产日期");
-        row.createCell(6).setCellValue("生产商");
-
-        int size = goodsList.size();
-        for (int i = 0; i < size; i++) {
-            row = sheet.createRow(i + 1);
-            row.createCell(0).setCellValue(goodsList.get(i).getId());
-            sheet.setColumnWidth(1, 12 * 256);
-            row.createCell(1).setCellValue(goodsList.get(i).getName());
-            row.createCell(2).setCellValue(goodsList.get(i).getCategory());
-            row.createCell(3).setCellValue(goodsList.get(i).getOrigin());
-            row.createCell(4).setCellValue(goodsList.get(i).getPrice().doubleValue());
-            Cell dateCell = row.createCell(5);
-            sheet.setColumnWidth(5, 15 * 256);
-            // 将日期格式化为 yyyy/MM/dd
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
-            String formattedDate = sdf.format(goodsList.get(i).getProductionDate());
-            dateCell.setCellValue(formattedDate);
-
-            row.createCell(6).setCellValue(goodsList.get(i).getManufacturer());
-        }
-        try {
-            response.setContentType("application//vnd.ms-excel");
-            response.setHeader("Content-Disposition", "attachment; filename=goods_data.xlsx");
-            excel.write(out);
-            excel.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void deleteCategory(String category) {
@@ -114,4 +71,53 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> getGoodsByCategory(String category) {
         return goodsMapper.getGoodsByCategory(category);
     }
+
 }
+
+
+
+
+
+
+//    public void export(List<Goods> goodsList, HttpServletResponse response) throws IOException {
+//        OutputStream out = response.getOutputStream();
+//
+//        XSSFWorkbook excel = new XSSFWorkbook();
+//
+//        XSSFSheet sheet = excel.createSheet();
+//        XSSFRow row = sheet.createRow(0);
+//        row.createCell(0).setCellValue("id");
+//        row.createCell(1).setCellValue("名称");
+//        row.createCell(2).setCellValue("种类");
+//        row.createCell(3).setCellValue("产地");
+//        row.createCell(4).setCellValue("价格");
+//        row.createCell(5).setCellValue("生产日期");
+//        row.createCell(6).setCellValue("生产商");
+//
+//        int size = goodsList.size();
+//        for (int i = 0; i < size; i++) {
+//            row = sheet.createRow(i + 1);
+//            row.createCell(0).setCellValue(goodsList.get(i).getId());
+//            sheet.setColumnWidth(1, 12 * 256);
+//            row.createCell(1).setCellValue(goodsList.get(i).getName());
+//            row.createCell(2).setCellValue(goodsList.get(i).getCategory());
+//            row.createCell(3).setCellValue(goodsList.get(i).getOrigin());
+//            row.createCell(4).setCellValue(goodsList.get(i).getPrice().doubleValue());
+//            Cell dateCell = row.createCell(5);
+//            sheet.setColumnWidth(5, 15 * 256);
+//            // 将日期格式化为 yyyy/MM/dd
+//            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+//            String formattedDate = sdf.format(goodsList.get(i).getProductionDate());
+//            dateCell.setCellValue(formattedDate);
+//
+//            row.createCell(6).setCellValue(goodsList.get(i).getManufacturer());
+//        }
+//        try {
+//            response.setContentType("application//vnd.ms-excel");
+//            response.setHeader("Content-Disposition", "attachment; filename=goods_data.xlsx");
+//            excel.write(out);
+//            excel.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }

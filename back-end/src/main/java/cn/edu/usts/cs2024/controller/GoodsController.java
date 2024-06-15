@@ -3,6 +3,7 @@ package cn.edu.usts.cs2024.controller;
 import cn.edu.usts.cs2024.pojo.Goods;
 import cn.edu.usts.cs2024.pojo.Result;
 import cn.edu.usts.cs2024.service.GoodsService;
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,10 +14,10 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class GoodsController {
 
-    @Autowired
-    private GoodsService goodsService;
+    private final GoodsService goodsService;
 
     @GetMapping("/goods")
     public List<Goods> getGoodsByCriteria(String searchName, String searchCategory) {
@@ -51,10 +52,10 @@ public class GoodsController {
     }
 
 
-    @PostMapping("/export/excel")
-    public void exportToExcel(@RequestBody List<Goods> goodsList, HttpServletResponse response) throws IOException {
-        goodsService.export(goodsList, response);
-    }
+//    @PostMapping("/export/excel")
+//    public void exportToExcel(@RequestBody List<Goods> goodsList, HttpServletResponse response) throws IOException {
+//        goodsService.export(goodsList, response);
+//    }
 
     @DeleteMapping("/deleteCategory/{category}")
     public Result deleteCategory(@PathVariable String category) {
