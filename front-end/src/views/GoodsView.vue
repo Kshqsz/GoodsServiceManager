@@ -6,14 +6,14 @@
                 <el-button type="success" round @click="exportToExcel">导出 Excel</el-button>
                 <el-button type="primary" round @click="showPrintPreview">打印预览</el-button>
             </div>
-        <div class="row mb-3">
-                <div class="col-md-2">
+            <div class="row">
+                <div class="col">
                     <el-input placeholder="商品名称" v-model="searchName" @keyup.enter.native="getGoods"></el-input>
                 </div>
-                <div class="col-md-2">
+                <div class="col">
                     <el-input placeholder="类别" v-model="searchCategory" @keyup.enter.native="getGoods"></el-input>
                 </div>
-                <div class="col-md-2">
+                <div class="col">
                     <el-button type="primary" round @click="getGoods">查询</el-button>
                 </div>
             </div>
@@ -152,16 +152,12 @@
   </template>
   
   <script>
-  import Vue from "vue"
+  
   import axios from '@/utils/axios';
   import * as echarts from "echarts"
-  import BootstrapVue from "bootstrap-vue";
-  Vue.use(BootstrapVue)
-  import 'bootstrap/dist/css/bootstrap.css'
-  import 'bootstrap-vue/dist/bootstrap-vue.css'
   import * as XLSX from 'xlsx'
-  
   import PrintPreview from './PrintPreview.vue';
+
   export default {
     components: {
       PrintPreview
@@ -377,7 +373,19 @@
   }
 }
 .float-end {
-  float: right !important;
+    float: right;
 }
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 1rem;
+  .col {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 16%;
+  }
+}
+
 </style>
   
