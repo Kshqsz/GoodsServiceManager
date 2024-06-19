@@ -43,7 +43,7 @@
         <el-table-column label="操作">
             <template slot-scope="scope">
                 <el-button type="primary" icon="el-icon-edit" round  size="small" @click="getGoodsById(scope.row.id)">编辑</el-button>
-                <el-button type="danger"  icon="el-icon-delete" round  size="small" @click="deleteGoods(scope.row.id)">删除</el-button>
+                <el-button type="danger"  icon="el-icon-delete" round  size="small" @click="deleteGoods(scope.row)">删除</el-button>
             </template>
         </el-table-column>
     </el-table>
@@ -169,15 +169,18 @@ export default {
       this.getGoodsByCategory(category);
       this.dialogVisible = true;
     },
-    deleteGoods(id) {
+    deleteGoods(row) {
+          var id = row.id;
+          var category = row.category;
           this.$confirm('你确定要删除吗?', '提示', {
               confirmButtonText: '确定',
               cancelButtonText: '取消',
               type: 'warning'
           }).then(() => {
-              axios.delete(`/delete/${id}`).then(() => {
-                  this.getGoods();
-                  this.$message.success("删除商品成功~");
+              axios.delete(`/delete/${id}`).then(async () => {
+                await this.getGoodsByCategory(category);
+                await this.getGoods();
+                this.$message.success("删除商品成功~");
               }).catch(error => {
                 this.$message.error(error);
               })

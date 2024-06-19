@@ -23,7 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5651326f-0b56-4394-8f4e-66a344300fc5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/PrintPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/PrintPreview.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +58,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="customMavenHome" value="D:\IntelliJ IDEA 2020.2.2\plugins\maven\lib\maven3" />
         <option name="localRepository" value="D:\develop\apache-maven-3.6.1\mvn_repo" />
-        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
         <option name="userSettingsFile" value="D:\develop\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -63,6 +74,7 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2f8NFBPaxaESak0HuJZwq5tLaJx" />
@@ -71,31 +83,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.Experiment2Application (2).executor": "Run",
-    "Spring Boot.Experiment2Application.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/GitHub/GoodsServiceManager/back-end",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\GitHub\GoodsServiceManager\back-end" />
@@ -280,7 +284,22 @@
       <workItem from="1718443820152" duration="3759000" />
       <workItem from="1718458578039" duration="3091000" />
       <workItem from="1718464256195" duration="9000" />
-      <workItem from="1718506954964" duration="978000" />
+      <workItem from="1718506954964" duration="1422000" />
+      <workItem from="1718597458874" duration="2424000" />
+      <workItem from="1718772030789" duration="208000" />
+      <workItem from="1718772636820" duration="212000" />
+      <workItem from="1718773140386" duration="344000" />
+      <workItem from="1718773727901" duration="1133000" />
+      <workItem from="1718775652756" duration="147000" />
+      <workItem from="1718776019878" duration="430000" />
+      <workItem from="1718776460644" duration="80000" />
+      <workItem from="1718776549646" duration="68000" />
+      <workItem from="1718776626551" duration="36000" />
+      <workItem from="1718776671177" duration="56000" />
+      <workItem from="1718776844105" duration="327000" />
+      <workItem from="1718777272729" duration="188000" />
+      <workItem from="1718777469946" duration="9000" />
+      <workItem from="1718777523532" duration="240000" />
     </task>
     <servers />
   </component>

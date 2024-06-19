@@ -14,8 +14,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in goodsList" :key="item.id">
-            <td>{{ item.id }}</td>
+          <tr v-for="(item, index) in goodsList" :key="item.id">
+            <td>{{ index + 1 }}</td>
             <td>{{ item.name }}</td>
             <td>{{ item.category }}</td>
             <td>{{ item.origin }}</td>

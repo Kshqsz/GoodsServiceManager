@@ -186,8 +186,8 @@
       }
     },
     methods: {
-      async getGoods() {
-          await axios.get("/goods", {
+       getGoods() {
+           axios.get("/goods", {
             params: {
                 searchName: this.searchName,
                 searchCategory: this.searchCategory,
@@ -247,7 +247,6 @@
               axios.delete(`/delete/${id}`).then(() => {
                   this.getGoods();
                   this.pageQuery();
-                  this.getCategories();
                   this.$message.success("删除商品成功~");
               }).catch(error => {
                   console.log(error)
@@ -266,7 +265,6 @@
           axios.put('/update', this.goods).then(() => {
               this.getGoods();
               this.pageQuery();
-              this.getCategories();
               this.$message.success("更新商品成功~");
           }).catch(error => {
               console.log(error);

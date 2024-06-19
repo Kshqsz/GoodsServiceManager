@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-241.14494.240">
-    <data-source name="@192.168.238.128" uuid="5651326f-0b56-4394-8f4e-66a344300fc5">
-      <database-info product="MySQL" version="8.0.27" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.27" exact-driver-version="8.2">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema">
-            <name qname="@" />
-            <name qname="javaee" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
     <data-source name="javaee@localhost" uuid="55e3749c-48c6-4283-bb98-4ea12e86e420">
       <database-info product="MySQL" version="8.0.36" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.36" exact-driver-version="8.2">
         <extra-name-characters>#@</extra-name-characters>
@@ -29,6 +12,24 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@192.168.238.128" uuid="74b3a118-6e7c-4911-b09b-f56aad4f2a35">
+      <database-info product="MySQL" version="8.0.27" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" dbms="MYSQL" exact-version="8.0.27" exact-driver-version="8.2">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="javaee" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>
