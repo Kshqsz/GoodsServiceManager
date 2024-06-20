@@ -1,60 +1,68 @@
 <template>
   <div id = "login" >
-    <span class = "title" v-if="isRegister">商品管理用户注册界面</span>
-    <span class = "title" v-else>商品管理用户登录界面</span>
-    <div id = "main" class = "login-container" >
-      <!-- 注册表单 -->
-      <el-form v-show="isRegister" size="large" :model="registerForm" :rules="rules" ref="registerForm">
-        <el-form-item label = "用户名" prop="username">
-          <el-input prefix-icon="el-icon-user" v-model="registerForm.username" placeholder="请输入用户名"></el-input>
-        </el-form-item>
-        <el-form-item label = "密码" prop="password">
-          <el-input prefix-icon="el-icon-lock" type = "password" v-model="registerForm.password" placeholder="请输入密码"></el-input>
-        </el-form-item>
-        <el-form-item label = "确认密码" prop="rePassword">
-          <el-input prefix-icon="el-icon-lock" type = "password" v-model="registerForm.rePassword" placeholder="请再次输入密码"></el-input>
-        </el-form-item>
-        <el-form-item>
-              <el-row :span="24">
-                <el-col :span="8">
-                  <el-input placeholder="请输入验证码" v-model="inputCode" ></el-input>
-                </el-col>
-                <el-col :span="8">
-                  <div @click="refreshCode"> <s-identify :identifyCode="identifyCode"></s-identify> </div>
-                </el-col>
-                <el-col :span="8">
-                  <el-link @click="refreshCode"><span style="color: blue;">换一张?</span></el-link>
-                </el-col>
-              </el-row>
-        </el-form-item>
-        <el-form-item>
-          <el-link type="info" @click="isRegister = false" style = "margin-right: 150px;">
-            ← 返回
-          </el-link>
-          <el-button type="primary" @click="register()" >
-                注册
-          </el-button>
-        </el-form-item>
-      </el-form>
-
-      
-      <!-- 登录表单 -->
-      <el-form v-show="isRegister == false" label-width = "80px" :rules="rules" :model="loginForm" ref="loginForm">
+    <el-card class="box-card">
+      <span class = "title" v-if="isRegister">商品管理用户注册界面</span>
+      <span class = "title" v-else>商品管理用户登录界面</span>
+      <br>
+      <div id = "main" class = "login-container" >
+        <!-- 注册表单 -->
+        <el-form v-show="isRegister" size="large" :model="registerForm" :rules="rules" ref="registerForm">
           <el-form-item label = "用户名" prop="username">
-              <el-input prefix-icon="el-icon-user" v-model = "loginForm.username" placeholder = "请输入用户名" @keyup.enter.native="login"></el-input>
+            <el-input prefix-icon="el-icon-user" v-model="registerForm.username" placeholder="请输入用户名"></el-input>
           </el-form-item>
           <el-form-item label = "密码" prop="password">
-              <el-input prefix-icon="el-icon-lock" type = "password" v-model = "loginForm.password" placeholder = "请输入密码" @keyup.enter.native="login"></el-input>
+            <el-input prefix-icon="el-icon-lock" type = "password" v-model="registerForm.password" placeholder="请输入密码"></el-input>
+          </el-form-item>
+          <el-form-item label = "确认密码" prop="rePassword">
+            <el-input prefix-icon="el-icon-lock" type = "password" v-model="registerForm.rePassword" placeholder="请再次输入密码"></el-input>
+          </el-form-item>
+          <br>
+          <el-form-item>
+                <el-row :span="24">
+                  <el-col :span="8">
+                    <el-input placeholder="请输入验证码" v-model="inputCode" ></el-input>
+                  </el-col>
+                  <el-col :span="8">
+                    <div @click="refreshCode"> <s-identify :identifyCode="identifyCode"></s-identify> </div>
+                  </el-col>
+                  <el-col :span="8">
+                    <el-link @click="refreshCode"><span style="color: blue;">换一张?</span></el-link>
+                  </el-col>
+                </el-row>
           </el-form-item>
           <el-form-item>
-              <el-button type = "primary" @click = "login">登录</el-button>
-              <el-link type="info" @click="isRegister = true" style = "margin-left: 150px;">
-                注册 →
-              </el-link>
+            <el-link type="info" @click="isRegister = false" style = "margin-right: 20px;">
+              ← 返回
+            </el-link>
+            <el-button type="primary" @click="register()" style="width: 300px">
+                  注册
+            </el-button>
           </el-form-item>
-      </el-form>
+        </el-form>
+
+        
+        <!-- 登录表单 -->
+        <el-form v-show="isRegister == false" label-width = "80px" :rules="rules" :model="loginForm" ref="loginForm">
+            <el-form-item label = "用户名" prop="username">
+                <el-input prefix-icon="el-icon-user" v-model = "loginForm.username" placeholder = "请输入用户名" @keyup.enter.native="login"></el-input>
+            </el-form-item>
+            <el-form-item label = "密码" prop="password">
+                <el-input prefix-icon="el-icon-lock" type = "password" v-model = "loginForm.password" placeholder = "请输入密码" @keyup.enter.native="login"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <br>
+                <el-button type = "primary" @click = "login" style="width: 300px;">登录</el-button>
+                <el-link type="info" @click="isRegister = true" style = "margin-left: 250px;">
+                  注册 →
+                </el-link>
+            </el-form-item>
+        </el-form>
+      </div>
+    </el-card>
+    <div class = "copyright">
+      <span style="color: aliceblue;">© Copyright 2024 Created By Kshqsz </span>
     </div>
-    <img src="../assets/preview.jpg" alt="" class="background-image">
+    <img src="../assets/2024-6-19.jpg" alt="" class="background-image">
   </div>
 </template>
 
@@ -164,6 +172,21 @@ export default {
 </script>
 
 <style>
+  .copyright {
+    position: absolute;
+    width: 300px;
+    height: 27px;
+    margin-left: calc(50% - 150px);
+    bottom: 24px;
+  }
+  .box-card {
+    height: 600px;
+    width: 500px;
+    margin-top: 150px;
+    margin-left: calc(80% - 250px);
+    padding-top: 20px;
+    opacity: 1;
+  }
   .login-container {
     width: 400px;
     margin: 0 auto;
@@ -182,6 +205,6 @@ export default {
     width: 100%;
     height: 100%;
     z-index: -1; /* 将图片放到最底层，不会覆盖原来的内容 */
-    opacity: 0; /* 可以根据需要调整透明度 */
+    opacity: 1; /* 可以根据需要调整透明度 */
   } 
 </style>

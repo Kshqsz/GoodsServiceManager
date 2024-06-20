@@ -147,6 +147,11 @@
                             style="text-align: center">
             </el-pagination>
             <div class="echarts-box" id="main"></div>
+            <!-- <el-carousel :interval="4000" type="card" height="200px">
+                <el-carousel-item v-for="item in imageList" :key="item.id">
+                    <img :src="item.imgUrl" class="image">
+                </el-carousel-item>
+            </el-carousel> -->
         </el-card>
     </div>
   </template>
@@ -171,8 +176,13 @@
           origin: '',
           price: '',
           productionDate: '',
-          manufacturer: ''
+          manufacturer: '',
         },
+        imageList: [
+            {id: 0, imgUrl: require("@/assets/preview.jpg")},
+            {id: 1, imgUrl: require("@/assets/preview1.jpg")},
+            {id: 2, imgUrl: require("@/assets/2024-6-19.jpg")}
+        ],
         page: 1,
         size: 5,
         pageSizes: [3, 5, 10, 20, 50, 100, 200, 300, 400, 500, 1000],
@@ -384,6 +394,20 @@
     width: 16%;
   }
 }
-
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 200px;
+    margin: 0;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
 </style>
   

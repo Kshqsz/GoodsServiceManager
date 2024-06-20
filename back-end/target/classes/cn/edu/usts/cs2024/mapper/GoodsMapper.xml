@@ -12,10 +12,12 @@
             <if test="searchCategory != null and searchCategory != ''"> and category = #{searchCategory}</if>
         </where>
     </select>
+
     <insert id="add">
         insert into goods(name, category, origin, price, production_date, manufacturer)
         values(#{name}, #{category}, #{origin}, #{price}, #{productionDate}, #{manufacturer})
     </insert>
+
     <update id="update">
         update goods
         <set>

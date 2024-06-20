@@ -23,20 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5651326f-0b56-4394-8f4e-66a344300fc5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55e3749c-48c6-4283-bb98-4ea12e86e420.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/55e3749c-48c6-4283-bb98-4ea12e86e420.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/usts/cs2024/interceptor/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/experiment2-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/CategoryView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/GoodsView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/PrintPreview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/PrintPreview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/assets/preview.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/assets/preview.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/assets/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,19 +78,21 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Experiment2Application.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/GitHub/GoodsServiceManager/back-end&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -300,6 +295,12 @@
       <workItem from="1718777272729" duration="188000" />
       <workItem from="1718777469946" duration="9000" />
       <workItem from="1718777523532" duration="240000" />
+      <workItem from="1718777905691" duration="491000" />
+      <workItem from="1718781307313" duration="971000" />
+      <workItem from="1718808294135" duration="28000" />
+      <workItem from="1718808901872" duration="2742000" />
+      <workItem from="1718856125348" duration="383000" />
+      <workItem from="1718857233446" duration="1185000" />
     </task>
     <servers />
   </component>
