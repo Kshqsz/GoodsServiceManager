@@ -23,13 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11ff9950-8785-4d95-8173-cc7f1339a3ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55e3749c-48c6-4283-bb98-4ea12e86e420.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/55e3749c-48c6-4283-bb98-4ea12e86e420.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/edu/usts/cs2024/mapper/GoodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/assets/preview.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/assets/preview.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/assets/preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/views/LoginView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,6 +295,7 @@
       <workItem from="1718808901872" duration="2742000" />
       <workItem from="1718856125348" duration="383000" />
       <workItem from="1718857233446" duration="1185000" />
+      <workItem from="1719066264934" duration="1676000" />
     </task>
     <servers />
   </component>

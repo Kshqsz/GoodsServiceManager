@@ -5,6 +5,7 @@ import HomeView from '@/views/HomeView.vue'
 import GoodsView from '@/views/GoodsView.vue'
 import CategoryView from './../views/CategoryView.vue'
 import UserView from './../views/UserView.vue'
+import TestView from './../views/TestView.vue'
 
 Vue.use(VueRouter)
 
@@ -22,7 +23,8 @@ const routes = [
         children: [
             { path: '/goods', name: 'goods', component: GoodsView },
             { path: '/category', component: CategoryView},
-            { path: '/user', component: UserView}
+            { path: '/user', component: UserView},
+            { path: '/test', component: TestView}
         ]
     },
     {

@@ -16,6 +16,10 @@
                     <i class="el-icon-user"></i>
                     <span>用户管理</span>
                 </el-menu-item>
+                <el-menu-item index="/test">
+                    <i class="el-icon-table-lamp"></i>
+                    <span>走马灯</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
         <el-container>
@@ -25,7 +29,6 @@
             <el-main>
                 <router-view></router-view>
             </el-main>
-
         </el-container>
     
     </el-container>
