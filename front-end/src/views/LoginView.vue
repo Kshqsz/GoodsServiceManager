@@ -60,7 +60,7 @@
       </div>
     </el-card>
     <div class = "copyright">
-      <span style="color: aliceblue;">© Copyright 2024 Created By Kshqsz </span>
+      <span>© Copyright 2024 Created By Kshqsz </span>
     </div>
     <img src="../assets/2024-6-19.jpg" alt="" class="background-image">
   </div>
@@ -203,7 +203,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 92%;
     z-index: -1; /* 将图片放到最底层，不会覆盖原来的内容 */
     opacity: 1; /* 可以根据需要调整透明度 */
   } 
